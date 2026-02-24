@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=YOUR_APP_STORE_ID">
+    <title>FAQ & Support | HoHoGo</title>
+
+    <style>
+        :root {
+            --paper: #F4F1EA;
+            --ink: #002147;
+            --accent-red: #C04000;
+            --accent-gold: #E9C46A;
+            --secondary: #3A506B;
+            --stroke: #D1D1D6;
+            --light-blue: #D0E4F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(var(--stroke) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 900;
+        }
+
+        /* Nav */
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            background-color: #C1E1C1;
+            /* pastel green */
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 2px solid var(--ink);
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .nav-btn {
+            background-color: var(--ink);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid var(--ink);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--accent-red);
+        }
+
+        /* Content Page */
+        .content-page {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 5%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            border: 2px solid var(--ink);
+            box-shadow: 8px 8px 0px var(--accent-gold);
+            padding: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-page {
+                padding: 30px;
+                margin: 40px auto;
+            }
+        }
+
+        .content-page h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+            color: var(--ink);
+            border-bottom: 4px solid var(--accent-red);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .content-page h3 {
+            font-size: 1.5rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--ink);
+        }
+
+        .content-page p {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .content-page ul,
+        .content-page ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .content-page li {
+            margin-bottom: 10px;
+        }
+
+        .content-page strong {
+            color: var(--ink);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001229;
+            color: white;
+            padding: 60px 5% 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+    </style>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+</head>
+
+<body>
+
+    <app-header lang="zh-hk" base-path="../"></app-header>
+
+    <main class="content-page">
+        <h1>常見問題</h1>
+
+        <p>歡迎來到 HoHoGo 的支援與常見問題頁面。如果你在這裡找不到想要的答案，請隨時透過 <strong>hohogo.app@gmail.com</strong> 聯絡我們。</p>
+
+        <h3>🗺️ 一般應用程式使用</h3>
+
+        <p><strong>HoHoGo 是什麼？</strong><br>
+            這是一個遊戲化的旅遊日記。你可以在世界各地著名地標打卡，收集設計精美的數碼徽章，解鎖護照主題，並建立你全球足跡的時間軸。
+        </p>
+
+        <p><strong>我該如何收集徽章？</strong><br>
+            要收集經驗證的徽章，你需要在地標「打卡」。你可以透過兩種方式進行：</p>
+        <ol>
+            <li><strong>現場打卡：</strong> 親身處於地標附近並使用裝置的 GPS。</li>
+            <li><strong>相片打卡：</strong> 上傳在地標拍攝的相片。我們的系統會檢查儲存在相片內的地理位置資料 (EXIF)，以驗證你曾到訪該處。</li>
+        </ol>
+
+        <p><strong>「經驗證的徽章」和「旅遊回憶」有什麼分別？</strong></p>
+        <ul>
+            <li><strong>經驗證的徽章：</strong> 如果你在地標現場打卡，或是上傳包含相符 GPS 資料的相片，你就會獲得該地點官方的全彩徽章。這會計算在你的任務進度之內。</li>
+            <li><strong>旅遊回憶：</strong> 如果你在地標打卡但我們無法驗證你的位置（例如，你在很遠的地方上傳沒有 GPS
+                資料的相片），它會被儲存為「旅遊回憶」。它仍會顯示在你的時間軸上讓你記錄旅程，但你不會獲得官方徽章。</li>
+        </ul>
+
+        <h3>🔒 私隱與資料</h3>
+
+        <p><strong>相片掃描器是如何運作的？它會上傳我的相簿嗎？</strong><br>
+            不會！相片掃描器 <strong>100% 在你的裝置上本機運行</strong>。它使用 Apple 的本地地理資料掃描你的相簿以尋找過往的旅程。只有當你明確選擇將相片儲存到日誌時，它才會將相片上傳到我們的伺服器。
+        </p>
+
+        <p><strong>為什麼應用程式需要我的位置資訊？</strong><br>
+            我們只會在你嘗試獲取徽章時，使用你的位置來驗證你是否真實身處該地標。我們不會在背景追蹤你的位置。</p>
+
+        <p><strong>我該如何刪除我的帳戶和資料？</strong><br>
+            你可以隨時刪除所有內容。前往<strong>個人檔案分頁</strong> &gt; 點擊<strong>設定（齒輪）圖示</strong> &gt; 向下捲動至<strong>危險區域 (Danger
+                Zone)</strong> 並點擊<strong>刪除帳戶</strong>。這將會立即並永久地從我們的伺服器清除你的帳戶、旅遊時間軸、相片及已獲得的徽章。</p>
+
+        <h3>✈️ 離線模式與功能</h3>
+
+        <p><strong>我可以在沒有網絡或數據的情況下於旅行時使用該應用程式嗎？</strong><br>
+            可以！我們為旅行者打造了這款應用程式。如果你沒有網絡，你仍然可以在地標打卡、撰寫日誌及儲存相片。應用程式會安全地離線儲存你的回憶，並在你下次連接 Wi-Fi 或行動數據時自動上傳。</p>
+
+        <p><strong>我該如何解鎖新主題和地圖圖示？</strong><br>
+            你可以透過邀請朋友來客製化你的應用程式！前往<strong>護照分頁</strong> &gt; 點擊<strong>齒輪圖示</strong> &gt; 點擊<strong>客製化</strong> &gt;
+            然後點擊<strong>旅遊夥伴系統</strong>。與朋友分享你專屬的邀請碼。當他們使用你的邀請碼註冊時，你將解鎖高級主題（如夜貓子或復古主題）、新的地圖交通工具以及專屬稱號。
+        </p>
+    </main>
+
+    <app-footer lang="zh-hk" base-path="../"></app-footer>
+
+</body>
+
+</html>
