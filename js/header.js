@@ -18,7 +18,7 @@ class Header extends HTMLElement {
                     HoHoGo
                 </a>
                 <div style="display: flex; gap: 15px; align-items: center;">
-                    <a href="${langUrl}" style="color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px;">${isZh ? 'English' : '繁體中文'}</a>
+                    <a href="${langUrl}" style="color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px;">${isZh ? 'English' : '繁體中文（香港）'}</a>
                     <a href="#" class="nav-btn">${isZh ? '下載 App' : 'Get the App'}</a>
                 </div>
             </nav>
