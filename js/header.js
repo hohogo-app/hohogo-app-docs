@@ -6,15 +6,17 @@ class Header extends HTMLElement {
     connectedCallback() {
         const basePath = this.getAttribute('base-path') || '';
         const isZh = this.getAttribute('lang') === 'zh-hk';
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+        const ext = isLocal ? '.html' : '';
         let currentPath = window.location.pathname.split('/').pop();
         currentPath = currentPath.replace('.html', '');
-        if (currentPath === 'zh-hk' || currentPath === 'index') currentPath = '';
-        const langUrl = isZh ? `../${currentPath}` : `zh-hk/${currentPath}`;
+        if (currentPath === 'zh-hk' || currentPath === '') currentPath = 'index';
+        const langUrl = isZh ? `../${currentPath}${ext}` : `zh-hk/${currentPath}${ext}`;
 
         this.innerHTML = `
         <div class="nav-wrapper">
             <nav>
-                <a href="${basePath}./" class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <a href="${basePath}index${ext}" class="logo" style="display: flex; align-items: center; gap: 10px;">
                     <img src="${basePath}img/app_icon.png" alt="HoHoGo Icon" style="width: 36px; height: 36px; border-radius: 8px;">
                     HoHoGo
                 </a>

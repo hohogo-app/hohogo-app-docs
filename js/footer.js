@@ -6,6 +6,8 @@ class Footer extends HTMLElement {
     connectedCallback() {
         const basePath = this.getAttribute('base-path') || '';
         const isZh = this.getAttribute('lang') === 'zh-hk';
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:';
+        const ext = isLocal ? '.html' : '';
         this.innerHTML = `
         <footer>
             <div class="footer-content">
@@ -16,9 +18,9 @@ class Footer extends HTMLElement {
                         <p style="margin-top: 10px;">${isZh ? '聯絡我們：' : 'Contact:'} hohogo.app@gmail.com</p>
                     </div>
                     <div class="footer-links">
-                        <a href="${basePath}faq">${isZh ? '支援與常見問題' : 'Support & FAQ'}</a>
-                        <a href="${basePath}privacy">${isZh ? '私隱政策' : 'Privacy Policy'}</a>
-                        <a href="${basePath}terms">${isZh ? '條款及細則' : 'Terms & Conditions'}</a>
+                        <a href="${basePath}faq${ext}">${isZh ? '支援與常見問題' : 'Support & FAQ'}</a>
+                        <a href="${basePath}privacy${ext}">${isZh ? '私隱政策' : 'Privacy Policy'}</a>
+                        <a href="${basePath}terms${ext}">${isZh ? '條款及細則' : 'Terms & Conditions'}</a>
                     </div>
                 </div>
                 <div class="footer-bottom">
