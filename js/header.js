@@ -11,12 +11,14 @@ class Header extends HTMLElement {
         let currentPath = window.location.pathname.split('/').pop();
         currentPath = currentPath.replace('.html', '');
         if (currentPath === 'zh-hk' || currentPath === 'en-ca' || currentPath === '') currentPath = 'index';
-        const langUrl = isZh ? `../en-ca/${currentPath}${ext}` : `../zh-hk/${currentPath}${ext}`;
+
+        const pathSuffix = (currentPath === 'index' && !isLocal) ? '' : `${currentPath}${ext}`;
+        const langUrl = isZh ? `../en-ca/${pathSuffix}` : `../zh-hk/${pathSuffix}`;
 
         this.innerHTML = `
         <div class="nav-wrapper">
             <nav>
-                <a href="index${ext}" class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <a href="${isLocal ? 'index.html' : './'}" class="logo" style="display: flex; align-items: center; gap: 10px;">
                     <img src="${basePath}img/app_icon.png" alt="HoHoGo Icon" style="width: 36px; height: 36px; border-radius: 8px;">
                     HoHoGo
                 </a>
