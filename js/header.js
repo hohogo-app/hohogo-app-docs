@@ -16,7 +16,7 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <div class="nav-wrapper">
             <nav>
-                <a href="${basePath}index${ext}" class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <a href="index${ext}" class="logo" style="display: flex; align-items: center; gap: 10px;">
                     <img src="${basePath}img/app_icon.png" alt="HoHoGo Icon" style="width: 36px; height: 36px; border-radius: 8px;">
                     HoHoGo
                 </a>

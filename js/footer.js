@@ -18,9 +18,9 @@ class Footer extends HTMLElement {
                         <p style="margin-top: 10px;">${isZh ? '聯絡我們：' : 'Contact:'} hohogo.app@gmail.com</p>
                     </div>
                     <div class="footer-links">
-                        <a href="${basePath}faq${ext}">${isZh ? '支援與常見問題' : 'Support & FAQ'}</a>
-                        <a href="${basePath}privacy${ext}">${isZh ? '私隱政策' : 'Privacy Policy'}</a>
-                        <a href="${basePath}terms${ext}">${isZh ? '條款及細則' : 'Terms & Conditions'}</a>
+                        <a href="faq${ext}">${isZh ? '支援與常見問題' : 'Support & FAQ'}</a>
+                        <a href="privacy${ext}">${isZh ? '私隱政策' : 'Privacy Policy'}</a>
+                        <a href="terms${ext}">${isZh ? '條款及細則' : 'Terms & Conditions'}</a>
                     </div>
                 </div>
                 <div class="footer-bottom">
