@@ -7,7 +7,8 @@ class Header extends HTMLElement {
         const basePath = this.getAttribute('base-path') || '';
         const isZh = this.getAttribute('lang') === 'zh-hk';
         let currentPath = window.location.pathname.split('/').pop();
-        if (currentPath === '' || currentPath === 'zh-hk') currentPath = 'index.html';
+        currentPath = currentPath.replace('.html', '');
+        if (currentPath === 'zh-hk' || currentPath === 'index') currentPath = '';
         const langUrl = isZh ? `../${currentPath}` : `zh-hk/${currentPath}`;
 
         this.innerHTML = `
