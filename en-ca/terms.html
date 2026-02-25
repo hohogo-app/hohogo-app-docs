@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=YOUR_APP_STORE_ID">
+    <title>Terms and Conditions | HoHoGo</title>
+
+    <style>
+        :root {
+            --paper: #F4F1EA;
+            --ink: #002147;
+            --accent-red: #C04000;
+            --accent-gold: #E9C46A;
+            --secondary: #3A506B;
+            --stroke: #D1D1D6;
+            --light-blue: #D0E4F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(var(--stroke) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 900;
+        }
+
+        /* Nav */
+        .nav-wrapper {
+            position: sticky;
+            top: 0;
+            background-color: #C1E1C1;
+            /* pastel green */
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 2px solid var(--ink);
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .nav-btn {
+            background-color: var(--ink);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid var(--ink);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px var(--accent-red);
+        }
+
+        /* Content Page */
+        .content-page {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 5%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            border: 2px solid var(--ink);
+            box-shadow: 8px 8px 0px var(--accent-gold);
+            padding: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-page {
+                padding: 30px;
+                margin: 40px auto;
+            }
+        }
+
+        .content-page h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+            color: var(--ink);
+            border-bottom: 4px solid var(--accent-red);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .content-page h3 {
+            font-size: 1.5rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: var(--ink);
+        }
+
+        .content-page p {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .content-page ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .content-page li {
+            margin-bottom: 10px;
+        }
+
+        .content-page strong {
+            color: var(--ink);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001229;
+            color: white;
+            padding: 60px 5% 40px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-brand h2 {
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+    </style>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+</head>
+
+<body>
+
+    <app-header base-path="../"></app-header>
+
+    <main class="content-page">
+        <h1>Terms and Conditions</h1>
+
+        <p><strong>Effective Date:</strong> February 21, 2026</p>
+
+        <p>By downloading or using HoHoGo ("the App"), these terms will automatically apply to you. Please read them
+            carefully before using the App.</p>
+
+        <h3>1. Acceptance of Terms</h3>
+        <p>By creating an account and using the App, you agree to be bound by these Terms and Conditions. If you
+            disagree with any part of these terms, you may not use our service.</p>
+
+        <h3>2. User Accounts</h3>
+        <ul>
+            <li>You are responsible for safeguarding the password or login credentials you use to access the App.</li>
+            <li>You agree not to use usernames that are offensive, impersonate others, or violate trademarks.</li>
+        </ul>
+
+        <h3>3. User-Generated Content</h3>
+        <p>The App allows you to upload photos and write journal entries ("Content").</p>
+        <ul>
+            <li><strong>Ownership:</strong> You retain all ownership rights to the Content you upload.</li>
+            <li><strong>License:</strong> By uploading Content, you grant us a worldwide, non-exclusive license to host
+                and display this Content within the App functionality.</li>
+            <li><strong>Restrictions:</strong> You agree NOT to upload Content that is illegal, abusive, harassing,
+                strictly copyrighted by others, or contains explicit/NSFW material. We reserve the right to remove any
+                Content that violates these rules without prior notice.</li>
+        </ul>
+
+        <h3>4. App Usage and Gamification Rules</h3>
+        <ul>
+            <li><strong>Fair Play:</strong> The App uses location verification to award digital badges and titles. You
+                agree not to use GPS spoofing software, automated bots, or exploits to falsely claim achievements.</li>
+            <li><strong>Referral Abuse:</strong> The referral system is intended for inviting real friends. Creating
+                fake accounts to farm referral rewards is prohibited and may result in account termination.</li>
+        </ul>
+
+        <h3>5. Intellectual Property</h3>
+        <p>All digital assets provided by us, including but not limited to 3D badge renderings, title patches, UI
+            designs, and app logos, are the intellectual property of HoHoGo. You may not extract, copy, or reuse these
+            assets outside of the App's intended sharing features without permission.</p>
+
+        <h3>6. Limitation of Liability</h3>
+        <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive for a reliable experience, we do
+            not guarantee that the App will be free of errors, bugs, or downtime. We are not liable for any loss of
+            data, travel memories, or damages arising from your use of the App.</p>
+        <p><em>(Disclaimer: Please be safe while traveling. Do not use the app while driving or walking in hazardous
+                areas).</em></p>
+
+        <h3>7. Changes to These Terms</h3>
+        <p>We reserve the right to update these Terms at any time. We will notify users of any significant changes via
+            in-app updates or email. Continued use of the App after changes implies acceptance of the new Terms.</p>
+
+        <h3>8. Contact</h3>
+        <p>If you have any questions regarding these Terms, please contact us at: <strong>hohogo.app@gmail.com</strong>.
+        </p>
+    </main>
+
+    <app-footer base-path="../"></app-footer>
+
+</body>
+
+</html>

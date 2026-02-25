@@ -10,8 +10,8 @@ class Header extends HTMLElement {
         const ext = isLocal ? '.html' : '';
         let currentPath = window.location.pathname.split('/').pop();
         currentPath = currentPath.replace('.html', '');
-        if (currentPath === 'zh-hk' || currentPath === '') currentPath = 'index';
-        const langUrl = isZh ? `../${currentPath}${ext}` : `zh-hk/${currentPath}${ext}`;
+        if (currentPath === 'zh-hk' || currentPath === 'en-ca' || currentPath === '') currentPath = 'index';
+        const langUrl = isZh ? `../en-ca/${currentPath}${ext}` : `../zh-hk/${currentPath}${ext}`;
 
         this.innerHTML = `
         <div class="nav-wrapper">
