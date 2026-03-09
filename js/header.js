@@ -24,7 +24,7 @@ class Header extends HTMLElement {
                 </a>
                 <div style="display: flex; gap: 15px; align-items: center;">
                     <a href="${langUrl}" style="color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px;">${isZh ? 'English' : '繁體中文（香港）'}</a>
-                    <a href="#" class="nav-btn">${isZh ? '下載 App' : 'Get the App'}</a>
+                    <a href="https://apps.apple.com/us/app/hohogo-travel-map-journal/id6759505355" class="nav-btn" target="_blank" rel="noopener noreferrer">${isZh ? '下載 App' : 'Get the App'}</a>
                 </div>
             </nav>
         </div>
